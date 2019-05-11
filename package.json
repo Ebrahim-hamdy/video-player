@@ -1,0 +1,28 @@
+{
+  "name": "video-player",
+  "version": "1.0.0",
+  "description": "Video Player App",
+  "main": "index.js",
+  "scripts": {
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Ebrahim-hamdy/video-player.git"
+  },
+  "author": "Ebrahim Hamdy",
+  "license": "ISC",
+  "devDependencies": {
+
+  },
+  "dependencies": {
+
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "babel",
+    "sass",
+    "material-ui"
+  ]
+}
