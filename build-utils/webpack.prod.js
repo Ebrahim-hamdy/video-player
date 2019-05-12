@@ -2,11 +2,11 @@ const commonPaths = require('./common-paths');
 const webpack = require('webpack');
 
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const extractTextPlugin = new ExtractTextPlugin({
-  filename: 'styles.[hash].css',
-  allChunks: true,
+const miniCssExtractPlugin = new MiniCssExtractPlugin({
+  filename: '[name].[hash].css',
+  chunkFilename: '[id].css',
 });
 
 module.exports = {
@@ -21,34 +21,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(css|scss)$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                modules: true,
-                importLoaders: 1,
-                camelCase: true,
-                sourceMap: true,
-              },
-            },
-            {
-              loader: 'postcss-loader',
-            },
-            {
-              loader: 'sass-loader',
-              options: {
-                sourceMap: true,
-              },
-            },
-          ],
-        }),
+        test: /\.(s*)css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
       },
     ],
   },
-  plugins: [new UglifyJSPlugin(), extractTextPlugin],
+  plugins: [new UglifyJSPlugin(), miniCssExtractPlugin],
 };
-
-// module.exports = config;
