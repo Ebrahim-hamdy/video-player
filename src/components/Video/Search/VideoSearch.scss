@@ -1,0 +1,51 @@
+.root {
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  width: 400;
+}
+
+.input {
+  margin-left: 8px !important;
+  flex: 1;
+}
+
+.iconButton {
+  padding: 10px !important;
+}
+
+.divider {
+  width: 1px;
+  height: 28px !important;
+  margin: 4px !important;
+}
+
+// alert
+
+.alert {
+  min-width: 150px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  @extend .shadow-1;
+  &:hover{
+    @extend .shadow-2;
+  }
+  &-success{
+    background-color: lighten(#c5cae9, 15%);
+    border-color: lighten(#c5cae9, 10%);
+    color: darken(#c5cae9, 15%);
+  }
+  p{
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.shadow-1{
+  box-shadow: 0 1px 3px rgba(#000, .12), 0 1px 2px rgba(#000, .24) ;
+}
+.shadow-2{
+  box-shadow: 0 3px 6px rgba(#000, .16), 0 3px 6px rgba(#000, .23) ;
+}
