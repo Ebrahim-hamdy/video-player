@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Ebrahim-hamdy/tasks-time-tracker-react.git"
+    "url": "git@github.com:Ebrahim-hamdy/video-player.git"
   },
   "author": "Ebrahim Hamdy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Ebrahim-hamdy/tasks-time-tracker-react/issues"
+    "url": "https://github.com/Ebrahim-hamdy/video-player/issues"
   },
-  "homepage": "https://github.com/Ebrahim-hamdy/tasks-time-tracker-react#readme",
+  "homepage": "https://github.com/Ebrahim-hamdy/video-player#readme",
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
