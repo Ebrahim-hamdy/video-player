@@ -13,10 +13,6 @@ import Typography from '@material-ui/core/Typography';
 const VideoList = ({ items, onSearch }) => {
   let [url, setUrl] = useState('');
 
-  const handleClick = item => {
-    onSearch(item.target.innerHTML);
-  };
-  
   return (
     <div>
       {items.length > 0 && (
@@ -34,7 +30,7 @@ const VideoList = ({ items, onSearch }) => {
                         <MissedVideoCallIcon />
                       </Avatar>
                       <ListItemText
-                        onClick={handleClick}
+                        onClick={() => onSearch(item.url)}
                         primary={item.url}
                         secondary={item.date}
                       />
